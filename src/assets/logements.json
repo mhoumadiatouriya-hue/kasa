@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "title": "Appartement cosy",
+    "cover": "https://picsum.photos/300/200"
+  },
+  {
+    "id": "2",
+    "title": "Maison avec vue",
+    "cover": "https://picsum.photos/300/201"
+  },
+  {
+    "id": "3",
+    "title": "Studio centre ville",
+    "cover": "https://picsum.photos/300/202"
+  }
+]

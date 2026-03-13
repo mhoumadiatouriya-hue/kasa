@@ -1,0 +1,36 @@
+.card {
+  width: 100%;
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+.card p {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  color: white;
+  font-weight: 700;
+  z-index: 1;
+  margin: 0;
+}

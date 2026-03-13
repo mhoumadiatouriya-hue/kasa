@@ -1,3 +1,13 @@
-h1 {
-  color: red;
+.home {
+  padding: 40px 100px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  background-color: #f6f6f6;
+  padding: 50px;
+  border-radius: 25px;
 }
