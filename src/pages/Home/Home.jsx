@@ -1,14 +1,24 @@
+import { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 import Card from "../../components/Card";
-import logements from "../../assets/logements.json";
 import "./home.css";
 
 export default function Home() {
-  return (
-    <div className="home">
-      <Banner />
+  const [logements, setLogements] = useState([]);
 
-      <div className="cards-container">
+  useEffect(() => {
+    fetch("http://localhost:8080/api/properties")
+      .then((response) => response.json())
+      .then((data) => {
+        setLogements(data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
+  return (
+    <main className="home">
+      <Banner />
+      <section className="gallery">
         {logements.map((logement) => (
           <Card
             key={logement.id}
@@ -17,7 +27,7 @@ export default function Home() {
             cover={logement.cover}
           />
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

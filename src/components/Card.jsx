@@ -5,7 +5,7 @@ export default function Card({ id, title, cover }) {
   return (
     <Link to={`/logement/${id}`} className="card">
       <img src={cover} alt={title} />
-      <p>{title}</p>
+      <p className="card-title">{title}</p>
     </Link>
   );
 }
