@@ -5,9 +5,11 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <h1 className="logo">Kasa</h1>
+        <Link to="/" className="header-logo-link">
+          <img src="/images/logo.png" alt="Kasa" className="header-logo" />
+        </Link>
 
-        <nav className="nav">
+        <nav className="header-nav">
           <Link to="/">Accueil</Link>
           <Link to="/about">A Propos</Link>
         </nav>
