@@ -1,14 +1,21 @@
 .banner {
-  background: #ddd;
   height: 223px;
   border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/images/banner-home.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .banner h1 {
-  color: black;
-  font-size: 32px;
+  color: white;
+  font-size: 48px;
   text-align: center;
+  margin: 0;
 }
