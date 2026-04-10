@@ -27,13 +27,16 @@
   .banner {
     height: 111px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
-    padding-right: 16px;
+    padding: 0 16px;
     background-position: center;
   }
 
   .banner h1 {
-    max-width: 220px;
+    margin: 0;
+    width: 217px;
     font-size: 24px;
     line-height: 1.1;
     text-align: right;

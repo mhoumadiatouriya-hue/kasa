@@ -51,10 +51,12 @@
   }
 
   .card-title {
-    left: auto;
+    position: absolute;
     right: 20px;
     bottom: 20px;
-    width: 150px;
+    left: auto;
+    width: 140px;
+    margin: 0;
     text-align: right;
     font-size: 18px;
     line-height: 1.2;
