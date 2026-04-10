@@ -29,16 +29,20 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0 16px;
+    justify-content: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
     background-position: center;
   }
 
   .banner h1 {
     margin: 0;
-    width: 217px;
+    max-width: 217px;
+    color: #ffffff;
     font-size: 24px;
+    font-weight: 700;
     line-height: 1.1;
-    text-align: right;
+    text-align: left;
+    word-break: normal;
   }
 }
