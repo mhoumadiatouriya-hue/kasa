@@ -3,11 +3,16 @@
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px 60px;
+  width: 1240px;
+  height: 829px;
   margin-top: 43px;
   background-color: #f6f6f6;
-  padding: 56px 50px 43px;
   border-radius: 25px;
+  padding: 56px 50px 43px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  grid-template-rows: repeat(2, 340px);
+  column-gap: 60px;
+  row-gap: 50px;
 }
