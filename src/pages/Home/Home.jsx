@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <main className="home">
       <Banner />
+
       <section className="gallery">
         {logements.map((logement) => (
           <Card
@@ -31,4 +32,3 @@ export default function Home() {
     </main>
   );
 }
-
