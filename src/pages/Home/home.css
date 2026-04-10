@@ -3,8 +3,6 @@
 }
 
 .gallery {
-  width: 1240px;
-  height: 829px;
   margin-top: 43px;
   background-color: #f6f6f6;
   border-radius: 25px;
@@ -12,7 +10,7 @@
 
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  grid-template-rows: repeat(2, 340px);
+  grid-auto-rows: 340px;
   column-gap: 60px;
   row-gap: 50px;
 }
