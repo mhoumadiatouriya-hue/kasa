@@ -40,3 +40,23 @@
   line-height: 1.4;
   z-index: 1;
 }
+
+/* version mobile */
+@media (max-width: 768px) {
+  .card {
+    width: 335px;
+    height: 255px;
+    aspect-ratio: auto;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+    width: 150px;
+    text-align: right;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}

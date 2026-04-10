@@ -35,3 +35,30 @@
 .header-nav a:hover {
   text-decoration: underline;
 }
+
+
+/* Version mobile (écran ≤ 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 20px 27px;
+  }
+
+  .header-container {
+    align-items: center;
+  }
+
+  .header-logo {
+    width: 145px;
+    height: 46.88px;
+  }
+
+  .header-nav {
+    gap: 26px;
+  }
+
+  .header-nav a {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
