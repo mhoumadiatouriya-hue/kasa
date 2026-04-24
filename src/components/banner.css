@@ -1,48 +1,50 @@
 .banner {
+  position: relative;
   width: 100%;
   height: 223px;
   border-radius: 25px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/images/banner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.banner h1 {
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%);
+}
+
+.banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
   margin: 0;
   color: #ffffff;
   font-size: 48px;
   font-weight: 700;
   text-align: center;
+  width: 100%;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* version mobile  */
+/* VERSION MOBILE*/
 @media (max-width: 768px) {
   .banner {
+    width: 100%;
+    max-width: 335px;
     height: 111px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 16px;
-    padding-right: 16px;
-    background-position: center;
+    margin: 0 auto;
   }
 
-  .banner h1 {
-    margin: 0;
-    max-width: 217px;
-    color: #ffffff;
+  .banner-title {
+    left: 16px;
+    transform: translateY(-50%);
+    width: 220px;
     font-size: 24px;
-    font-weight: 700;
     line-height: 1.1;
     text-align: left;
-    word-break: normal;
   }
 }

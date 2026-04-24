@@ -1,9 +1,11 @@
 import "./banner.css";
 
-export default function Banner() {
+export default function Banner({ texte, image }) {
   return (
     <section className="banner">
-      <h1>Chez vous, partout et ailleurs</h1>
+      <img src={image} alt="" className="banner-image" />
+
+      {texte && <h1 className="banner-title">{texte}</h1>}
     </section>
   );
 }

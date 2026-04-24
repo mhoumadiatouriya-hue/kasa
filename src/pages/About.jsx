@@ -1,10 +1,12 @@
 import Banner from "../components/Banner";
 import "./about.css";
 
+const aboutImage = "/images/apropos.png";
+
 export default function About() {
   return (
     <main className="about">
-      <Banner image="/images/banner.png" />
+      <Banner texte="" image={aboutImage} />
 
       <section className="about-content">
         <div className="about-item">Fiabilité</div>
