@@ -40,8 +40,11 @@
 
 /* VERSION MOBILE */
 @media (max-width: 768px) {
+
   .header {
-    padding: 20px;
+    width: 335px;
+    margin: 0 auto;
+    padding: 20px 0 27px;
   }
 
   .header-container {
@@ -57,6 +60,8 @@
   }
 
   .header-nav {
+    display: flex;
+    align-items: center;
     gap: 26px;
   }
 
@@ -66,5 +71,10 @@
     font-weight: 500;
     text-transform: uppercase;
     white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .nav-link.active {
+    text-decoration: underline;
   }
 }

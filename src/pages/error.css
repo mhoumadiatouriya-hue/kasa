@@ -26,21 +26,39 @@
 }
 
 @media (max-width: 768px) {
+
   .error-page {
-    padding: 100px 40px;
-    min-height: 420px;
+    width: 335px;
+    margin: 0 auto;
+    padding: 80px 0 113px;
   }
 
   .error-title {
+    width: 198px;
+    height: 99px;
+    margin: 0 auto;
+
     font-size: 96px;
+    font-weight: 700;
+    line-height: 99px;
+    text-align: center;
   }
 
   .error-message {
+    width: 260px;
+    margin: 113px auto 113px;
+
     font-size: 18px;
-    margin: 80px 0 110px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
   }
 
   .error-link {
+    display: block;
+
     font-size: 14px;
+    font-weight: 500;
+    text-align: center;
   }
 }
