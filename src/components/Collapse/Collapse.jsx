@@ -10,6 +10,7 @@ export default function Collapse({ title, content }) {
         type="button"
         className="collapse-header"
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
       >
         <span>{title}</span>
         <span className={isOpen ? "collapse-arrow open" : "collapse-arrow"}>
@@ -17,11 +18,7 @@ export default function Collapse({ title, content }) {
         </span>
       </button>
 
-      {isOpen && (
-        <div className="collapse-content">
-          <p>{content}</p>
-        </div>
-      )}
+      {isOpen && <div className="collapse-content">{content}</div>}
     </div>
   );
 }

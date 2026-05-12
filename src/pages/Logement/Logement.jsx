@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
+import Collapse from "../../components/Collapse/Collapse";
 import "./logement.css";
 
 export default function Logement() {
@@ -46,7 +47,7 @@ export default function Logement() {
 
   return (
     <main className="logement">
-      <section className="carousel">
+      <section className="carousel" aria-label="Galerie photos du logement">
         <img
           src={pictures[currentPicture]}
           alt={logement.title}
@@ -81,7 +82,7 @@ export default function Logement() {
       </section>
 
       <section className="logement-header">
-        <div>
+        <div className="logement-info">
           <h1>{logement.title}</h1>
           <p className="logement-location">{logement.location}</p>
 
@@ -98,7 +99,7 @@ export default function Logement() {
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
 
-          <div className="rating">
+          <div className="rating" aria-label={`Note ${logement.rating} sur 5`}>
             {[1, 2, 3, 4, 5].map((star) => (
               <span
                 key={star}
@@ -114,19 +115,14 @@ export default function Logement() {
       </section>
 
       <section className="logement-collapses">
-        <details>
-          <summary>Description</summary>
-          <p>{logement.description}</p>
-        </details>
+        <Collapse title="Description" content={logement.description} />
 
-        <details>
-          <summary>Équipements</summary>
-          <ul>
-            {logement.equipments.map((equipment) => (
-              <li key={equipment}>{equipment}</li>
-            ))}
-          </ul>
-        </details>
+        <Collapse
+          title="Équipements"
+          content={logement.equipments.map((equipment) => (
+            <span key={equipment}>{equipment}</span>
+          ))}
+        />
       </section>
     </main>
   );
