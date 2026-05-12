@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import Card from "./Card";
+import Card from "../components/Card";
 
 describe("Card", () => {
   test("affiche le titre du logement", () => {
