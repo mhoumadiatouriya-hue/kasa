@@ -14,6 +14,7 @@ export default function Logement() {
         if (!response.ok) {
           throw new Error("Logement introuvable");
         }
+
         return response.json();
       })
       .then((data) => setLogement(data))
@@ -21,7 +22,7 @@ export default function Logement() {
   }, [id]);
 
   if (error) {
-    return <Navigate to="/error" />;
+    return <Navigate to="/404" replace />;
   }
 
   if (!logement) {
@@ -58,6 +59,7 @@ export default function Logement() {
               type="button"
               className="carousel-button carousel-button-left"
               onClick={showPreviousPicture}
+              aria-label="Image précédente"
             >
               ‹
             </button>
@@ -66,6 +68,7 @@ export default function Logement() {
               type="button"
               className="carousel-button carousel-button-right"
               onClick={showNextPicture}
+              aria-label="Image suivante"
             >
               ›
             </button>
@@ -99,7 +102,9 @@ export default function Logement() {
             {[1, 2, 3, 4, 5].map((star) => (
               <span
                 key={star}
-                className={star <= Number(logement.rating) ? "star active" : "star"}
+                className={
+                  star <= Number(logement.rating) ? "star active" : "star"
+                }
               >
                 ★
               </span>

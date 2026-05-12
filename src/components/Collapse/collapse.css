@@ -1,0 +1,60 @@
+.collapse {
+  width: 100%;
+}
+
+.collapse-header {
+  width: 100%;
+  border: none;
+  background-color: #ff6060;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 13px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.collapse-arrow {
+  display: inline-block;
+  font-size: 26px;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+
+.collapse-arrow.open {
+  transform: rotate(90deg);
+}
+
+.collapse-content {
+  background-color: #f6f6f6;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.collapse-content p {
+  margin: 0;
+}
+
+/* VERSION MOBILE */
+@media (max-width: 768px) {
+  .collapse-header {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .collapse-arrow {
+    font-size: 18px;
+  }
+
+  .collapse-content {
+    font-size: 12px;
+    padding: 15px 12px;
+  }
+}

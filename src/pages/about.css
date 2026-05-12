@@ -10,15 +10,6 @@
   gap: 30px;
 }
 
-.about-item {
-  background-color: #ff6060;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 13px 20px;
-  border-radius: 5px;
-}
-
 /* VERSION MOBILE */
 @media (max-width: 768px) {
   .about {
@@ -29,10 +20,5 @@
     width: 100%;
     margin-top: 22px;
     gap: 20px;
-  }
-
-  .about-item {
-    font-size: 13px;
-    padding: 10px 12px;
   }
 }

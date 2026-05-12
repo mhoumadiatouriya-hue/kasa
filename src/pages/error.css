@@ -1,0 +1,46 @@
+.error-page {
+  color: #ff6060;
+  text-align: center;
+  padding: 90px 20px;
+  min-height: 500px;
+}
+
+.error-title {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.error-message {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 60px 0 120px;
+}
+
+.error-link {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .error-page {
+    padding: 100px 40px;
+    min-height: 420px;
+  }
+
+  .error-title {
+    font-size: 96px;
+  }
+
+  .error-message {
+    font-size: 18px;
+    margin: 80px 0 110px;
+  }
+
+  .error-link {
+    font-size: 14px;
+  }
+}

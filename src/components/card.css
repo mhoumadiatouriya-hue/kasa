@@ -6,6 +6,7 @@
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 .card-image {
@@ -35,27 +36,25 @@
   bottom: 20px;
   margin: 0;
   color: #ffffff;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.4;
   z-index: 1;
 }
 
-/* version mobile */
+/* VERSION MOBILE */
 @media (max-width: 768px) {
   .card {
     width: 335px;
     height: 255px;
     aspect-ratio: auto;
-    border-radius: 10px;
   }
 
   .card-title {
-    position: absolute;
     left: 20px;
     right: auto;
     bottom: 20px;
-    margin: 0;
     width: 150px;
     text-align: left;
     font-size: 18px;

@@ -1,20 +1,27 @@
 import { Routes, Route } from "react-router-dom";
+
 import Home from "../pages/Home/Home";
 import About from "../pages/About";
-import Error from "../pages/Error";
 import Logement from "../pages/Logement/Logement";
-import MainLayout from "../layouts/MainLayout";
+import Error from "../pages/Error";
+
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Router() {
   return (
-    <Routes>
-      <Route element={<MainLayout />}>
+    <>
+      <Header />
+
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/logement/:id" element={<Logement />} />
-      </Route>
+        <Route path="/404" element={<Error />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
 
-      <Route path="*" element={<Error />} />
-    </Routes>
+      <Footer />
+    </>
   );
 }

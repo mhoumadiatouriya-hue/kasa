@@ -8,6 +8,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-logo {
@@ -20,20 +22,17 @@
 .footer-text {
   margin: 0;
   color: #ffffff;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 500;
   text-align: center;
 }
 
-/* version mobile */
+/* VERSION MOBILE */
 @media (max-width: 768px) {
   .footer {
     margin-top: 27px;
     padding: 33px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 15px;
   }
 
@@ -44,10 +43,8 @@
   }
 
   .footer-text {
-    margin: 0;
     max-width: 134px;
     font-size: 12px;
     line-height: 1.4;
-    text-align: center;
   }
 }
