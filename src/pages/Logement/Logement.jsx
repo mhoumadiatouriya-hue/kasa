@@ -62,7 +62,7 @@ export default function Logement() {
               onClick={showPreviousPicture}
               aria-label="Image précédente"
             >
-              ‹
+              ❮
             </button>
 
             <button
@@ -71,7 +71,7 @@ export default function Logement() {
               onClick={showNextPicture}
               aria-label="Image suivante"
             >
-              ›
+              ❯
             </button>
 
             <p className="carousel-counter">
@@ -84,6 +84,7 @@ export default function Logement() {
       <section className="logement-header">
         <div className="logement-info">
           <h1>{logement.title}</h1>
+
           <p className="logement-location">{logement.location}</p>
 
           <div className="logement-tags">
@@ -96,15 +97,24 @@ export default function Logement() {
         <div className="host-rating">
           <div className="host">
             <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt={logement.host.name} />
+
+            <img
+              src={logement.host.picture}
+              alt={logement.host.name}
+            />
           </div>
 
-          <div className="rating" aria-label={`Note ${logement.rating} sur 5`}>
+          <div
+            className="rating"
+            aria-label={`Note ${logement.rating} sur 5`}
+          >
             {[1, 2, 3, 4, 5].map((star) => (
               <span
                 key={star}
                 className={
-                  star <= Number(logement.rating) ? "star active" : "star"
+                  star <= Number(logement.rating)
+                    ? "star active"
+                    : "star"
                 }
               >
                 ★
@@ -115,7 +125,10 @@ export default function Logement() {
       </section>
 
       <section className="logement-collapses">
-        <Collapse title="Description" content={logement.description} />
+        <Collapse
+          title="Description"
+          content={logement.description}
+        />
 
         <Collapse
           title="Équipements"
