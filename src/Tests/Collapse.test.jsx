@@ -4,7 +4,6 @@ import userEvent from "@testing-library/user-event";
 import Collapse from "../components/Collapse/Collapse";
 
 describe("Collapse", () => {
-
   test("affiche le titre", () => {
     render(
       <Collapse
@@ -26,9 +25,11 @@ describe("Collapse", () => {
       />
     );
 
-    expect(
-      screen.queryByText("Contenu du logement")
-    ).not.toBeInTheDocument();
+    const content = screen.getByText("Contenu du logement");
+    const wrapper = content.closest(".collapse-content-wrapper");
+
+    expect(wrapper).toHaveAttribute("aria-hidden", "true");
+    expect(wrapper).not.toHaveClass("open");
   });
 
   test("ouvre le collapse après un clic", async () => {
@@ -45,9 +46,12 @@ describe("Collapse", () => {
 
     await user.click(button);
 
-    expect(
-      screen.getByText("Contenu du logement")
-    ).toBeInTheDocument();
+    const content = screen.getByText("Contenu du logement");
+    const wrapper = content.closest(".collapse-content-wrapper");
+
+    expect(button).toHaveAttribute("aria-expanded", "true");
+    expect(wrapper).toHaveAttribute("aria-hidden", "false");
+    expect(wrapper).toHaveClass("open");
   });
 
   test("ferme le collapse après un second clic", async () => {
@@ -65,9 +69,11 @@ describe("Collapse", () => {
     await user.click(button);
     await user.click(button);
 
-    expect(
-      screen.queryByText("Contenu du logement")
-    ).not.toBeInTheDocument();
-  });
+    const content = screen.getByText("Contenu du logement");
+    const wrapper = content.closest(".collapse-content-wrapper");
 
+    expect(button).toHaveAttribute("aria-expanded", "false");
+    expect(wrapper).toHaveAttribute("aria-hidden", "true");
+    expect(wrapper).not.toHaveClass("open");
+  });
 });
