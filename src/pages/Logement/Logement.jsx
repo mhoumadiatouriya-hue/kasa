@@ -9,6 +9,7 @@ export default function Logement() {
   const [error, setError] = useState(false);
   const [currentPicture, setCurrentPicture] = useState(0);
 
+  // On va récupérer les données du logement correspondant à l'identifiant présent dans l'URL.
   useEffect(() => {
     fetch(`http://localhost:8080/api/properties/${id}`)
       .then((response) => {
@@ -22,6 +23,7 @@ export default function Logement() {
       .catch(() => setError(true));
   }, [id]);
 
+  // On redirige vers la page 404 si l'API ne trouve pas le logement demandé.
   if (error) {
     return <Navigate to="/404" replace />;
   }
@@ -32,7 +34,9 @@ export default function Logement() {
 
   const pictures = logement.pictures || [];
   const totalPictures = pictures.length;
-
+  
+  // Navigation circulaire : depuis la première image, on revient à la dernière,
+  // et depuis la dernière, on revient à la première.
   const showPreviousPicture = () => {
     setCurrentPicture((prevIndex) =>
       prevIndex === 0 ? totalPictures - 1 : prevIndex - 1
